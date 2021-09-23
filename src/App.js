@@ -1,15 +1,18 @@
-import Border from "./Border";
-import ByLine from "./ByLine";
-
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Border />
-      <ByLine />
+      <p>
+        <a
+          href="https://github.com/sajoh002/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Coded
+        </a>{" "}
+        by Sarah Johnson
+      </p>
     </div>
   );
 }
-
-export default App;
