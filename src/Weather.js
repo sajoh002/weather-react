@@ -12,18 +12,23 @@ export default function Weather() {
             type="search"
             placeholder="Enter a city..."
             className="form-control"
+            autoFocus="on"
           />{" "}
         </div>
         <div className="col-3">
-          <input type="submit" value="Search" className="btn btn-secondary" />
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-secondary w-100"
+          />
         </div>
       </div>
-      <h6>Thursday, September 23, 2021</h6>
-      <h3>1:20 PM</h3>
-      <h6>Baltimore</h6>
-      <ReactAnimatedWeather icon="CLOUDY" />
+      <h6 className="mt-4">Thursday, September 23, 2021</h6>
+      <h3 className="mt-3">1:20 PM</h3>
+      <h6 className="mt-3 mb-4">Baltimore</h6>
+      <ReactAnimatedWeather icon="CLOUDY" color="white" size={250} />
       <h2>66°F</h2>
-      <h3>Cloudy</h3>
+      <h3 className="mb-4">Cloudy</h3>
       <hr />
       <div className="row">
         <div className="col-3">
