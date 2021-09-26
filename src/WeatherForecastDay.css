@@ -1,0 +1,10 @@
+.WeatherForecastDa6 .ForecastDay {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.WeatherForecastDay .ForecastHigh {
+  font-weight: 700;
+  margin-right: 5px;
+}

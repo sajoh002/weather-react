@@ -19,23 +19,16 @@ export default function WeatherInfo(props) {
       <h3 className="mb-4 text-capitalize">{props.info.description}</h3>
       <hr />
       <div className="row">
-        <div className="col-3">
-          <h6>High:</h6>
-          <p>{Math.round(props.info.high)}°</p>
-        </div>
-        <div className="col-3">
-          <h6>Low:</h6>
-          <p>{Math.round(props.info.low)}°</p>
-        </div>
-        <div className="col-3">
+        <div className="col-6">
           <h6>Humidity:</h6>
           <p>{props.info.humidity}%</p>
         </div>
-        <div className="col-3">
+        <div className="col-6">
           <h6>Wind:</h6>
           <p>{Math.round(props.info.wind)} mph</p>
         </div>
       </div>
+      <hr />
     </div>
   );
 }
