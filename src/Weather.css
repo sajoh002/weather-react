@@ -1,9 +1,17 @@
+body {
+  background: black;
+}
+
 .Weather {
   max-width: 600px;
   margin: 30px auto 0 auto;
   padding: 20px;
   border-radius: 10px;
-  background: #4cb0d0;
+  background: radial-gradient(
+    circle at 4.3% 10.7%,
+    rgb(138, 118, 249) 13.6%,
+    rgb(75, 252, 235) 100.7%
+  );
   color: white;
 }
 
