@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
         <FormattedTime />
       </h4>
       <h2 className="mt-3 mb-4">{props.info.city}</h2>
-      <WeatherIcon code={props.info.icon} />
+      <WeatherIcon code={props.info.icon} size={250} />
       <WeatherTemperature fahrenheit={props.info.temperature} />
       <h3 className="mb-4 text-capitalize">{props.info.description}</h3>
       <hr />
