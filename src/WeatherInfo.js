@@ -15,7 +15,9 @@ export default function WeatherInfo(props) {
       </h4>
       <h2 className="mt-3 mb-4">{props.info.city}</h2>
       <WeatherIcon code={props.info.icon} size={250} />
-      <WeatherTemperature fahrenheit={props.info.temperature} />
+      <h2 className="mt-3">
+        {Math.round(props.fahrenheit)} <span className="unit">°F</span>
+      </h2>
       <h3 className="mb-4 text-capitalize">{props.info.description}</h3>
       <hr />
       <div className="row">
