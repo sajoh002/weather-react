@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast.js";
 import axios from "axios";
@@ -8,6 +8,12 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
+  useEffect(function () {
+    const apiKey = "979b0f0f351a5c4ea430dfe10b13b53f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }, []);
 
   function handleResponse(response) {
     setWeatherData({
@@ -68,8 +74,6 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
-
     return "Loading";
   }
 }
