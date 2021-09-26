@@ -9,7 +9,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  useEffect(function () {
+  useEffect(() => {
     const apiKey = "979b0f0f351a5c4ea430dfe10b13b53f";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
