@@ -1,7 +1,7 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
         <FormattedTime />
       </h4>
       <h2 className="mt-3 mb-4">{props.info.city}</h2>
-      <ReactAnimatedWeather icon="CLEAR_DAY" color="white" size={250} />
+      <WeatherIcon code={props.info.icon} />
       <h2 className="mt-3">{Math.round(props.info.temperature)}°F</h2>
       <h3 className="mb-4 text-capitalize">{props.info.description}</h3>
       <hr />
