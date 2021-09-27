@@ -8,10 +8,13 @@ export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
   const [hourlyForecast, setHourlyForecast] = useState(null);
 
-  useEffect(() => {
-    setLoaded(false);
-    load();
-  }, [props.coordinates]);
+  useEffect(
+    () => {
+      setLoaded(false);
+      load();
+    }, // eslint-disable-next-line
+    [props.coordinates]
+  );
 
   function handleResponse(response) {
     setHourlyForecast(response.data.hourly);
